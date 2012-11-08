@@ -17,7 +17,26 @@
 		CD0123BD1611AC6A00CBE84A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123BC1611AC6A00CBE84A /* Default@2x.png */; };
 		CD0123BF1611AC6A00CBE84A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123BE1611AC6A00CBE84A /* Default-568h@2x.png */; };
 		CD0123C21611AC6A00CBE84A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0123C01611AC6A00CBE84A /* MainStoryboard.storyboard */; };
-		CD0123C51611AC6A00CBE84A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0123C41611AC6A00CBE84A /* ViewController.m */; };
+		CD0123D21611AE6A00CBE84A /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0123D11611AE6A00CBE84A /* CameraViewController.m */; };
+		CD0123D61611AE7D00CBE84A /* noStream.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123D41611AE7D00CBE84A /* noStream.png */; };
+		CD0123D71611AE7D00CBE84A /* stream.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123D51611AE7D00CBE84A /* stream.png */; };
+		CD0123DA1611B17000CBE84A /* streamNight.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123D91611B17000CBE84A /* streamNight.png */; };
+		CD14449A16159B7500892551 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = CD14449916159B7500892551 /* Track.m */; };
+		CD14449E16159E8700892551 /* SelectMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD14449D16159E8700892551 /* SelectMusicViewController.m */; };
+		CD1444A11615A21F00892551 /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1444A01615A21F00892551 /* TrackCell.m */; };
+		CDAF993B161AFFE5002856B2 /* glyphicons_331_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAF993A161AFFE5002856B2 /* glyphicons_331_dashboard.png */; };
+		CDB7A2721611B69200153D5D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A26F1611B69200153D5D /* camera.png */; };
+		CDB7A2731611B69200153D5D /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2701611B69200153D5D /* music.png */; };
+		CDB7A2741611B69200153D5D /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2711611B69200153D5D /* settings.png */; };
+		CDB7A2761611B90A00153D5D /* glyphicons_184_volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2751611B90A00153D5D /* glyphicons_184_volume_up.png */; };
+		CDB7A2781611B94D00153D5D /* glyphicons_183_volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2771611B94D00153D5D /* glyphicons_183_volume_down.png */; };
+		CDB7A27A1611BAB500153D5D /* glyphicons_206_ok_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2791611BAB500153D5D /* glyphicons_206_ok_2.png */; };
+		CDB7A27E1611BB0C00153D5D /* glyphicons_172_rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A27B1611BB0C00153D5D /* glyphicons_172_rewind.png */; };
+		CDB7A27F1611BB0C00153D5D /* glyphicons_173_play.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A27C1611BB0C00153D5D /* glyphicons_173_play.png */; };
+		CDB7A2801611BB0C00153D5D /* glyphicons_176_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A27D1611BB0C00153D5D /* glyphicons_176_forward.png */; };
+		CDB7A2831611BBEA00153D5D /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB7A2821611BBEA00153D5D /* MusicViewController.m */; };
+		CDB7A2861611C01000153D5D /* glyphicons_190_circle_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2841611C01000153D5D /* glyphicons_190_circle_plus.png */; };
+		CDB7A2871611C01000153D5D /* glyphicons_191_circle_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2851611C01000153D5D /* glyphicons_191_circle_minus.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +54,31 @@
 		CD0123BC1611AC6A00CBE84A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CD0123BE1611AC6A00CBE84A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CD0123C11611AC6A00CBE84A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CD0123C31611AC6A00CBE84A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CD0123C41611AC6A00CBE84A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD0123D01611AE6A00CBE84A /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		CD0123D11611AE6A00CBE84A /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		CD0123D41611AE7D00CBE84A /* noStream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noStream.png; sourceTree = "<group>"; };
+		CD0123D51611AE7D00CBE84A /* stream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stream.png; sourceTree = "<group>"; };
+		CD0123D91611B17000CBE84A /* streamNight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = streamNight.png; sourceTree = "<group>"; };
+		CD14449816159B7500892551 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		CD14449916159B7500892551 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		CD14449C16159E8700892551 /* SelectMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMusicViewController.h; sourceTree = "<group>"; };
+		CD14449D16159E8700892551 /* SelectMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMusicViewController.m; sourceTree = "<group>"; };
+		CD14449F1615A21F00892551 /* TrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackCell.h; sourceTree = "<group>"; };
+		CD1444A01615A21F00892551 /* TrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackCell.m; sourceTree = "<group>"; };
+		CDAF993A161AFFE5002856B2 /* glyphicons_331_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_331_dashboard.png; sourceTree = "<group>"; };
+		CDB7A26F1611B69200153D5D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		CDB7A2701611B69200153D5D /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		CDB7A2711611B69200153D5D /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		CDB7A2751611B90A00153D5D /* glyphicons_184_volume_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_184_volume_up.png; sourceTree = "<group>"; };
+		CDB7A2771611B94D00153D5D /* glyphicons_183_volume_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_183_volume_down.png; sourceTree = "<group>"; };
+		CDB7A2791611BAB500153D5D /* glyphicons_206_ok_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_206_ok_2.png; sourceTree = "<group>"; };
+		CDB7A27B1611BB0C00153D5D /* glyphicons_172_rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_172_rewind.png; sourceTree = "<group>"; };
+		CDB7A27C1611BB0C00153D5D /* glyphicons_173_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_173_play.png; sourceTree = "<group>"; };
+		CDB7A27D1611BB0C00153D5D /* glyphicons_176_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_176_forward.png; sourceTree = "<group>"; };
+		CDB7A2811611BBEA00153D5D /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		CDB7A2821611BBEA00153D5D /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		CDB7A2841611C01000153D5D /* glyphicons_190_circle_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_190_circle_plus.png; sourceTree = "<group>"; };
+		CDB7A2851611C01000153D5D /* glyphicons_191_circle_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_191_circle_minus.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +125,21 @@
 		CD0123AE1611AC6A00CBE84A /* MyRo Cam */ = {
 			isa = PBXGroup;
 			children = (
+				CD14449816159B7500892551 /* Track.h */,
+				CD14449916159B7500892551 /* Track.m */,
+				CD0123D31611AE7100CBE84A /* Resources */,
+				CD0123AF1611AC6A00CBE84A /* Supporting Files */,
 				CD0123B71611AC6A00CBE84A /* AppDelegate.h */,
 				CD0123B81611AC6A00CBE84A /* AppDelegate.m */,
 				CD0123C01611AC6A00CBE84A /* MainStoryboard.storyboard */,
-				CD0123C31611AC6A00CBE84A /* ViewController.h */,
-				CD0123C41611AC6A00CBE84A /* ViewController.m */,
-				CD0123AF1611AC6A00CBE84A /* Supporting Files */,
+				CD14449C16159E8700892551 /* SelectMusicViewController.h */,
+				CD14449D16159E8700892551 /* SelectMusicViewController.m */,
+				CD14449F1615A21F00892551 /* TrackCell.h */,
+				CD1444A01615A21F00892551 /* TrackCell.m */,
+				CD0123D01611AE6A00CBE84A /* CameraViewController.h */,
+				CD0123D11611AE6A00CBE84A /* CameraViewController.m */,
+				CDB7A2811611BBEA00153D5D /* MusicViewController.h */,
+				CDB7A2821611BBEA00153D5D /* MusicViewController.m */,
 			);
 			path = "MyRo Cam";
 			sourceTree = "<group>";
@@ -105,6 +156,44 @@
 				CD0123BE1611AC6A00CBE84A /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD0123D31611AE7100CBE84A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDB7A26D1611B66F00153D5D /* Icons */,
+				CD0123D81611AE8200CBE84A /* Camera */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CD0123D81611AE8200CBE84A /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				CD0123D91611B17000CBE84A /* streamNight.png */,
+				CD0123D41611AE7D00CBE84A /* noStream.png */,
+				CD0123D51611AE7D00CBE84A /* stream.png */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		CDB7A26D1611B66F00153D5D /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				CDAF993A161AFFE5002856B2 /* glyphicons_331_dashboard.png */,
+				CDB7A2841611C01000153D5D /* glyphicons_190_circle_plus.png */,
+				CDB7A2851611C01000153D5D /* glyphicons_191_circle_minus.png */,
+				CDB7A27B1611BB0C00153D5D /* glyphicons_172_rewind.png */,
+				CDB7A27C1611BB0C00153D5D /* glyphicons_173_play.png */,
+				CDB7A27D1611BB0C00153D5D /* glyphicons_176_forward.png */,
+				CDB7A2791611BAB500153D5D /* glyphicons_206_ok_2.png */,
+				CDB7A2771611B94D00153D5D /* glyphicons_183_volume_down.png */,
+				CDB7A2751611B90A00153D5D /* glyphicons_184_volume_up.png */,
+				CDB7A26F1611B69200153D5D /* camera.png */,
+				CDB7A2701611B69200153D5D /* music.png */,
+				CDB7A2711611B69200153D5D /* settings.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +252,21 @@
 				CD0123BD1611AC6A00CBE84A /* Default@2x.png in Resources */,
 				CD0123BF1611AC6A00CBE84A /* Default-568h@2x.png in Resources */,
 				CD0123C21611AC6A00CBE84A /* MainStoryboard.storyboard in Resources */,
+				CD0123D61611AE7D00CBE84A /* noStream.png in Resources */,
+				CD0123D71611AE7D00CBE84A /* stream.png in Resources */,
+				CD0123DA1611B17000CBE84A /* streamNight.png in Resources */,
+				CDB7A2721611B69200153D5D /* camera.png in Resources */,
+				CDB7A2731611B69200153D5D /* music.png in Resources */,
+				CDB7A2741611B69200153D5D /* settings.png in Resources */,
+				CDB7A2761611B90A00153D5D /* glyphicons_184_volume_up.png in Resources */,
+				CDB7A2781611B94D00153D5D /* glyphicons_183_volume_down.png in Resources */,
+				CDB7A27A1611BAB500153D5D /* glyphicons_206_ok_2.png in Resources */,
+				CDB7A27E1611BB0C00153D5D /* glyphicons_172_rewind.png in Resources */,
+				CDB7A27F1611BB0C00153D5D /* glyphicons_173_play.png in Resources */,
+				CDB7A2801611BB0C00153D5D /* glyphicons_176_forward.png in Resources */,
+				CDB7A2861611C01000153D5D /* glyphicons_190_circle_plus.png in Resources */,
+				CDB7A2871611C01000153D5D /* glyphicons_191_circle_minus.png in Resources */,
+				CDAF993B161AFFE5002856B2 /* glyphicons_331_dashboard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +279,11 @@
 			files = (
 				CD0123B51611AC6A00CBE84A /* main.m in Sources */,
 				CD0123B91611AC6A00CBE84A /* AppDelegate.m in Sources */,
-				CD0123C51611AC6A00CBE84A /* ViewController.m in Sources */,
+				CD0123D21611AE6A00CBE84A /* CameraViewController.m in Sources */,
+				CDB7A2831611BBEA00153D5D /* MusicViewController.m in Sources */,
+				CD14449A16159B7500892551 /* Track.m in Sources */,
+				CD14449E16159E8700892551 /* SelectMusicViewController.m in Sources */,
+				CD1444A11615A21F00892551 /* TrackCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +364,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyRo Cam/MyRo Cam-Prefix.pch";
 				INFOPLIST_FILE = "MyRo Cam/MyRo Cam-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -267,6 +376,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyRo Cam/MyRo Cam-Prefix.pch";
 				INFOPLIST_FILE = "MyRo Cam/MyRo Cam-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -291,6 +401,7 @@
 				CD0123CA1611AC6A00CBE84A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
