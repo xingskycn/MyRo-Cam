@@ -24,6 +24,8 @@
 		CD14449A16159B7500892551 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = CD14449916159B7500892551 /* Track.m */; };
 		CD14449E16159E8700892551 /* SelectMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD14449D16159E8700892551 /* SelectMusicViewController.m */; };
 		CD1444A11615A21F00892551 /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1444A01615A21F00892551 /* TrackCell.m */; };
+		CD8CD5BB164D15B8001C34E0 /* Temperature.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD5B9164D15B8001C34E0 /* Temperature.m */; };
+		CD8CD5C3164D16C5001C34E0 /* TemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD5C2164D16C5001C34E0 /* TemperatureViewController.m */; };
 		CDAF993B161AFFE5002856B2 /* glyphicons_331_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAF993A161AFFE5002856B2 /* glyphicons_331_dashboard.png */; };
 		CDB7A2721611B69200153D5D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A26F1611B69200153D5D /* camera.png */; };
 		CDB7A2731611B69200153D5D /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2701611B69200153D5D /* music.png */; };
@@ -65,6 +67,11 @@
 		CD14449D16159E8700892551 /* SelectMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMusicViewController.m; sourceTree = "<group>"; };
 		CD14449F1615A21F00892551 /* TrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackCell.h; sourceTree = "<group>"; };
 		CD1444A01615A21F00892551 /* TrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackCell.m; sourceTree = "<group>"; };
+		CD8CD5B8164D15B8001C34E0 /* Temperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Temperature.h; path = ../Temperature.h; sourceTree = "<group>"; };
+		CD8CD5B9164D15B8001C34E0 /* Temperature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temperature.m; path = ../Temperature.m; sourceTree = "<group>"; };
+		CD8CD5BA164D15B8001C34E0 /* AbstractTemperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractTemperature.h; path = ../AbstractTemperature.h; sourceTree = "<group>"; };
+		CD8CD5C1164D16C5001C34E0 /* TemperatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureViewController.h; sourceTree = "<group>"; };
+		CD8CD5C2164D16C5001C34E0 /* TemperatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureViewController.m; sourceTree = "<group>"; };
 		CDAF993A161AFFE5002856B2 /* glyphicons_331_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_331_dashboard.png; sourceTree = "<group>"; };
 		CDB7A26F1611B69200153D5D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		CDB7A2701611B69200153D5D /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
@@ -125,6 +132,9 @@
 		CD0123AE1611AC6A00CBE84A /* MyRo Cam */ = {
 			isa = PBXGroup;
 			children = (
+				CD8CD5B8164D15B8001C34E0 /* Temperature.h */,
+				CD8CD5B9164D15B8001C34E0 /* Temperature.m */,
+				CD8CD5BA164D15B8001C34E0 /* AbstractTemperature.h */,
 				CD14449816159B7500892551 /* Track.h */,
 				CD14449916159B7500892551 /* Track.m */,
 				CD0123D31611AE7100CBE84A /* Resources */,
@@ -140,6 +150,8 @@
 				CD0123D11611AE6A00CBE84A /* CameraViewController.m */,
 				CDB7A2811611BBEA00153D5D /* MusicViewController.h */,
 				CDB7A2821611BBEA00153D5D /* MusicViewController.m */,
+				CD8CD5C1164D16C5001C34E0 /* TemperatureViewController.h */,
+				CD8CD5C2164D16C5001C34E0 /* TemperatureViewController.m */,
 			);
 			path = "MyRo Cam";
 			sourceTree = "<group>";
@@ -284,6 +296,8 @@
 				CD14449A16159B7500892551 /* Track.m in Sources */,
 				CD14449E16159E8700892551 /* SelectMusicViewController.m in Sources */,
 				CD1444A11615A21F00892551 /* TrackCell.m in Sources */,
+				CD8CD5BB164D15B8001C34E0 /* Temperature.m in Sources */,
+				CD8CD5C3164D16C5001C34E0 /* TemperatureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

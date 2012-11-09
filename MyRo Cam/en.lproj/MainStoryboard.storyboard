@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4bu-ql-nV3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4bu-ql-nV3">
     <dependencies>
         <deployment version="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Music View Controller - Music-->
@@ -577,23 +577,16 @@
             </objects>
             <point key="canvasLocation" x="-262" y="191"/>
         </scene>
-        <!--View Controller - Temperature-->
+        <!--Temperature View Controller - Temperature-->
         <scene sceneID="vhV-Ay-eOC">
             <objects>
-                <viewController id="cQG-At-Cng" sceneMemberID="viewController">
+                <viewController id="cQG-At-Cng" customClass="TemperatureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zvZ-t0-Vpx">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Temperatuur: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EgY-hk-GsW">
-                                <rect key="frame" x="20" y="20" width="107" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Luchtvochtigheid:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p0r-xr-tun">
-                                <rect key="frame" x="20" y="49" width="133" height="21"/>
+                                <rect key="frame" x="20" y="20" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -603,6 +596,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Temperature" id="IVW-vt-m7u"/>
+                    <connections>
+                        <outlet property="lblTemperature" destination="EgY-hk-GsW" id="woW-cg-OQz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXX-HP-ZGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -716,6 +712,12 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectMusicViewController.h"/>
             <relationships>
                 <relationship kind="action" name="donePressed:"/>
+            </relationships>
+        </class>
+        <class className="TemperatureViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TemperatureViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="lblTemperature" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="TrackCell" superclassName="UITableViewCell">
