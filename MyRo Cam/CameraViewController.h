@@ -7,15 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSData+Additions.h"
 
-@interface CameraViewController : UIViewController
+@interface CameraViewController : UIViewController<UIGestureRecognizerDelegate>
 
-@property (strong, nonatomic) IBOutlet UIImageView *StreamImage;
+@property (strong, nonatomic) IBOutlet UIImageView *liveStreamImage;
 
-@property (strong, nonatomic) IBOutlet UISwitch *videoTogleOutlet;
-- (IBAction)videoTogle:(id)sender;
+- (IBAction)share:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIButton *dayNightOutlet;
-- (IBAction)dayNightButton:(id)sender;
+@property (strong, nonatomic) IBOutlet UISlider *brightnessSlider;
+- (IBAction)adjustBrightness:(id)sender;
+
+@property (strong, nonatomic) NSString *camIp;
+@property (strong, nonatomic) NSString *camUsername;
+@property (strong, nonatomic) NSString *camPassword;
+@property (strong, nonatomic) NSString *camAuthHeader;
+
+
+- (IBAction)camSwitchChanged:(id)sender;
+@property (strong, nonatomic) IBOutlet UISwitch *camOnOffSwitch;
+@property (nonatomic) BOOL *camOn;
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *dayNightControl;
+- (IBAction)changeDayNight:(id)sender;
 
 @end
