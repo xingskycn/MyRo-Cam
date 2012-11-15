@@ -17,7 +17,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="MusicCell" id="wKK-DS-dvX">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="MusicCell" id="wKK-DS-dvX" customClass="TrackCell">
                                         <rect key="frame" x="0.0" y="22" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -48,8 +48,17 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="x3B-Xr-jOR" id="vrf-jI-BWy"/>
+                                            <outlet property="durationLabel" destination="s0U-hD-xP7" id="UA4-Re-LSI"/>
+                                            <outlet property="titleLabel" destination="OCH-Se-rbJ" id="eZV-dH-jTw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xiR-kr-Bup" id="49n-kN-srl"/>
+                                    <outlet property="delegate" destination="xiR-kr-Bup" id="Gqc-Zh-ylz"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" id="CCr-3f-lAW">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
@@ -126,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="MusicCell" id="l9o-3y-JOn">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="SelectMusicCell" id="l9o-3y-JOn" customClass="TrackCell">
                                 <rect key="frame" x="0.0" y="22" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -157,6 +166,11 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <outlet property="artistLabel" destination="85h-uJ-cgR" id="Rhx-d1-hNz"/>
+                                    <outlet property="durationLabel" destination="pwu-q5-ohV" id="Dno-JN-zNr"/>
+                                    <outlet property="titleLabel" destination="674-ZH-qPW" id="J7l-m0-s8z"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -165,7 +179,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="XS3-GJ-tny">
-                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="1Oc-0Y-n7W"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="1Oc-0Y-n7W">
+                            <connections>
+                                <action selector="donePressed:" destination="OkD-ex-aIT" id="s48-af-vjg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHa-yv-BZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,9 +582,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="5PF-CA-Bc4" kind="relationship" relationship="viewControllers" id="5la-4i-lOR"/>
+                        <segue destination="xiR-kr-Bup" kind="relationship" relationship="viewControllers" id="jbs-qU-hfC"/>
                         <segue destination="47n-Yf-87A" kind="relationship" relationship="viewControllers" id="3IJ-He-fqM"/>
                         <segue destination="S7E-91-Xi0" kind="relationship" relationship="viewControllers" id="PQI-JA-clL"/>
-                        <segue destination="xiR-kr-Bup" kind="relationship" relationship="viewControllers" id="jbs-qU-hfC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXj-NW-5Dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -820,6 +838,14 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TemperatureViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="lblTemperature" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TrackCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrackCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="artistLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

@@ -22,6 +22,7 @@
 }
 
 @synthesize delegate;
+@synthesize checkedIndexPath;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -225,7 +226,7 @@
 }
 
 - (IBAction)donePressed:(UIButton *)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [[self delegate] selectingDone: selectedIndexes];
 }
 @end
