@@ -12,7 +12,9 @@
 @interface TemperatureViewController ()
 @end
 
-@implementation TemperatureViewController
+@implementation TemperatureViewController {
+    Temperature *temp;
+}
 
 @synthesize lblTemperature;
 @synthesize tableData;
@@ -21,7 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+ 
     }
     return self;
 }
@@ -30,11 +32,21 @@
 {
     [super viewDidLoad];
     
-    [self parseJSON];
-	// Do any additional setup after loading the view.
-    Temperature *temp = [[Temperature alloc] init];
+    temp = [[Temperature alloc] init];
     
-    lblTemperature.text = [NSString stringWithFormat:@"Temperature: %f",temp.getTemperature];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    
+    
+   dispatch_async(queue, ^{
+        [self parseJSON];
+       
+       dispatch_async(dispatch_get_main_queue(), ^{
+           lblTemperature.text = [NSString stringWithFormat:@"Temperatuur: %@",[temp getTemperature]];
+       });
+    
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,6 +61,8 @@
 }
 
 -(void)parseJSON {
+    
+
     NSData *dataUrl = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://api.wunderground.com/api/29c3df9966dfd8c1/conditions/q/CA/Goes.json"]];
     NSInputStream *dataInputStream = [[NSInputStream alloc] initWithData:dataUrl];
     [dataInputStream open];
@@ -61,17 +75,23 @@
             
         
             NSDictionary *section = [jsonObject objectForKey:@"current_observation"];
-            //NSString temp = [NSString stringWithFormat:@" Temperatuur: %s",];
+
             
-           // NSArray *result = [section objectForKey:@"temp_c"];
+         NSNumber *section2 = [section valueForKey:@"temp_c"];
             
-         NSDictionary *section2 = [section objectForKey:@"temp_c"];
+       
+    
             
-             
+       
+           // lblTemperature.text = [NSString stringWithFormat:@"Temperature: %@",section2];
+
+   
             
+    //temp.temp = [NSNumber numberWithDouble:12.345];
+            temp.temp = section2;
             
-        }
         
+        }
 
     }
 }

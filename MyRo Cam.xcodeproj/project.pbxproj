@@ -16,14 +16,14 @@
 		CD0123BB1611AC6A00CBE84A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123BA1611AC6A00CBE84A /* Default.png */; };
 		CD0123BD1611AC6A00CBE84A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123BC1611AC6A00CBE84A /* Default@2x.png */; };
 		CD0123BF1611AC6A00CBE84A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123BE1611AC6A00CBE84A /* Default-568h@2x.png */; };
-		CD0123C21611AC6A00CBE84A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0123C01611AC6A00CBE84A /* MainStoryboard.storyboard */; };
+		CD0123C21611AC6A00CBE84A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0123C01611AC6A00CBE84A /* MainStoryboard_iPhone.storyboard */; };
 		CD0123D21611AE6A00CBE84A /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0123D11611AE6A00CBE84A /* CameraViewController.m */; };
-		CD0123D61611AE7D00CBE84A /* noStream.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123D41611AE7D00CBE84A /* noStream.png */; };
-		CD0123D71611AE7D00CBE84A /* stream.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123D51611AE7D00CBE84A /* stream.png */; };
-		CD0123DA1611B17000CBE84A /* streamNight.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0123D91611B17000CBE84A /* streamNight.png */; };
 		CD14449A16159B7500892551 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = CD14449916159B7500892551 /* Track.m */; };
 		CD14449E16159E8700892551 /* SelectMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD14449D16159E8700892551 /* SelectMusicViewController.m */; };
 		CD1444A11615A21F00892551 /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1444A01615A21F00892551 /* TrackCell.m */; };
+		CD175013165114F60051091D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD175012165114F60051091D /* MainStoryboard_iPad.storyboard */; };
+		CD1750181651171B0051091D /* nostream.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD1750171651171B0051091D /* nostream.jpg */; };
+		CD175019165117780051091D /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1750161651165B0051091D /* NSData+Additions.m */; };
 		CD8CD5C3164D16C5001C34E0 /* TemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD5C2164D16C5001C34E0 /* TemperatureViewController.m */; };
 		CD8CD5C8164D20E3001C34E0 /* Temperature.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD5C5164D203B001C34E0 /* Temperature.m */; };
 		CDAF993B161AFFE5002856B2 /* glyphicons_331_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAF993A161AFFE5002856B2 /* glyphicons_331_dashboard.png */; };
@@ -55,18 +55,19 @@
 		CD0123BA1611AC6A00CBE84A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CD0123BC1611AC6A00CBE84A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CD0123BE1611AC6A00CBE84A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		CD0123C11611AC6A00CBE84A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CD0123C11611AC6A00CBE84A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		CD0123D01611AE6A00CBE84A /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		CD0123D11611AE6A00CBE84A /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
-		CD0123D41611AE7D00CBE84A /* noStream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noStream.png; sourceTree = "<group>"; };
-		CD0123D51611AE7D00CBE84A /* stream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stream.png; sourceTree = "<group>"; };
-		CD0123D91611B17000CBE84A /* streamNight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = streamNight.png; sourceTree = "<group>"; };
 		CD14449816159B7500892551 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
 		CD14449916159B7500892551 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		CD14449C16159E8700892551 /* SelectMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMusicViewController.h; sourceTree = "<group>"; };
 		CD14449D16159E8700892551 /* SelectMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMusicViewController.m; sourceTree = "<group>"; };
 		CD14449F1615A21F00892551 /* TrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackCell.h; sourceTree = "<group>"; };
 		CD1444A01615A21F00892551 /* TrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackCell.m; sourceTree = "<group>"; };
+		CD175012165114F60051091D /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		CD1750151651165B0051091D /* NSData+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Additions.h"; sourceTree = "<group>"; };
+		CD1750161651165B0051091D /* NSData+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Additions.m"; sourceTree = "<group>"; };
+		CD1750171651171B0051091D /* nostream.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nostream.jpg; sourceTree = "<group>"; };
 		CD8CD5C1164D16C5001C34E0 /* TemperatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureViewController.h; sourceTree = "<group>"; };
 		CD8CD5C2164D16C5001C34E0 /* TemperatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureViewController.m; sourceTree = "<group>"; };
 		CD8CD5C4164D203B001C34E0 /* Temperature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Temperature.h; sourceTree = "<group>"; };
@@ -132,6 +133,8 @@
 		CD0123AE1611AC6A00CBE84A /* MyRo Cam */ = {
 			isa = PBXGroup;
 			children = (
+				CD1750151651165B0051091D /* NSData+Additions.h */,
+				CD1750161651165B0051091D /* NSData+Additions.m */,
 				CD8CD5C6164D204B001C34E0 /* AbstractTemperature.h */,
 				CD8CD5C4164D203B001C34E0 /* Temperature.h */,
 				CD8CD5C5164D203B001C34E0 /* Temperature.m */,
@@ -141,7 +144,8 @@
 				CD0123AF1611AC6A00CBE84A /* Supporting Files */,
 				CD0123B71611AC6A00CBE84A /* AppDelegate.h */,
 				CD0123B81611AC6A00CBE84A /* AppDelegate.m */,
-				CD0123C01611AC6A00CBE84A /* MainStoryboard.storyboard */,
+				CD0123C01611AC6A00CBE84A /* MainStoryboard_iPhone.storyboard */,
+				CD175012165114F60051091D /* MainStoryboard_iPad.storyboard */,
 				CD14449C16159E8700892551 /* SelectMusicViewController.h */,
 				CD14449D16159E8700892551 /* SelectMusicViewController.m */,
 				CD14449F1615A21F00892551 /* TrackCell.h */,
@@ -182,9 +186,7 @@
 		CD0123D81611AE8200CBE84A /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				CD0123D91611B17000CBE84A /* streamNight.png */,
-				CD0123D41611AE7D00CBE84A /* noStream.png */,
-				CD0123D51611AE7D00CBE84A /* stream.png */,
+				CD1750171651171B0051091D /* nostream.jpg */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -263,10 +265,7 @@
 				CD0123BB1611AC6A00CBE84A /* Default.png in Resources */,
 				CD0123BD1611AC6A00CBE84A /* Default@2x.png in Resources */,
 				CD0123BF1611AC6A00CBE84A /* Default-568h@2x.png in Resources */,
-				CD0123C21611AC6A00CBE84A /* MainStoryboard.storyboard in Resources */,
-				CD0123D61611AE7D00CBE84A /* noStream.png in Resources */,
-				CD0123D71611AE7D00CBE84A /* stream.png in Resources */,
-				CD0123DA1611B17000CBE84A /* streamNight.png in Resources */,
+				CD0123C21611AC6A00CBE84A /* MainStoryboard_iPhone.storyboard in Resources */,
 				CDB7A2721611B69200153D5D /* camera.png in Resources */,
 				CDB7A2731611B69200153D5D /* music.png in Resources */,
 				CDB7A2741611B69200153D5D /* settings.png in Resources */,
@@ -279,6 +278,8 @@
 				CDB7A2861611C01000153D5D /* glyphicons_190_circle_plus.png in Resources */,
 				CDB7A2871611C01000153D5D /* glyphicons_191_circle_minus.png in Resources */,
 				CDAF993B161AFFE5002856B2 /* glyphicons_331_dashboard.png in Resources */,
+				CD175013165114F60051091D /* MainStoryboard_iPad.storyboard in Resources */,
+				CD1750181651171B0051091D /* nostream.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD175019165117780051091D /* NSData+Additions.m in Sources */,
 				CD8CD5C8164D20E3001C34E0 /* Temperature.m in Sources */,
 				CD0123B51611AC6A00CBE84A /* main.m in Sources */,
 				CD0123B91611AC6A00CBE84A /* AppDelegate.m in Sources */,
@@ -312,12 +314,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CD0123C01611AC6A00CBE84A /* MainStoryboard.storyboard */ = {
+		CD0123C01611AC6A00CBE84A /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CD0123C11611AC6A00CBE84A /* en */,
 			);
-			name = MainStoryboard.storyboard;
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -378,8 +380,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyRo Cam/MyRo Cam-Prefix.pch";
 				INFOPLIST_FILE = "MyRo Cam/MyRo Cam-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,8 +393,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyRo Cam/MyRo Cam-Prefix.pch";
 				INFOPLIST_FILE = "MyRo Cam/MyRo Cam-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -10,6 +10,8 @@
 #import "AbstractTemperature.h"
 
 @interface Temperature : NSObject<AbstractTemperature>
+@property(nonatomic, retain) NSNumber *temp;
 
+-(NSNumber *) getTemperature ;
 
 @end
