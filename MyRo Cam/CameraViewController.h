@@ -26,7 +26,6 @@
 
 - (IBAction)camSwitchChanged:(id)sender;
 @property (strong, nonatomic) IBOutlet UISwitch *camOnOffSwitch;
-@property (nonatomic) BOOL *camOn;
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *dayNightControl;
 - (IBAction)changeDayNight:(id)sender;
