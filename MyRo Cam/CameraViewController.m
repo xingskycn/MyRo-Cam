@@ -7,6 +7,7 @@
 //
 
 #import "CameraViewController.h"
+#import "api.h"
 
 @interface CameraViewController ()
 
@@ -15,14 +16,12 @@
 @implementation CameraViewController {
     UISwipeGestureRecognizer *Swipe;
     NSTimer *timer;
-    int activeBrightness;
-    int color;
-    bool camOn;
+    api *apiConnection;
 }
 
 @synthesize liveStreamImage;
 
-@synthesize camIp, camUsername, camPassword, camAuthHeader, brightnessSlider;
+@synthesize brightnessSlider;
 @synthesize camOnOffSwitch;
 @synthesize dayNightControl;
 
@@ -30,19 +29,7 @@
 {
     [super viewDidLoad];
     
-    camIp = @"145.48.128.202";
-    camUsername = @"mad";
-    camPassword = @"bigbrother";
-    
-    color = 1;
-    camOn = NO;
-    
-    NSMutableString *loginString = (NSMutableString*)[@"" stringByAppendingFormat:@"%@:%@", camUsername, camPassword];
-    NSData *authData = [loginString dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *encodedLoginData = [authData base64Encoding];
-    camAuthHeader = [@"Basic " stringByAppendingFormat:@"%@", encodedLoginData];
-    
-    activeBrightness = (int)roundf(brightnessSlider.value);
+    apiConnection = [[api alloc] init];
     
     // swipe left
     Swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
@@ -73,7 +60,7 @@
     [self.view addGestureRecognizer:Pinch];
     // end pinch
     
-    if(camOn)
+    if([apiConnection.camOn isEqualToNumber:[NSNumber numberWithBool:YES]])
     {
         [self setCameraOn];
     }
@@ -92,7 +79,7 @@
 
 - (void) setCameraOn
 {
-    camOn = YES;
+    [apiConnection camSetCamOn];
     if(timer == nil)
     {
         timer = [NSTimer scheduledTimerWithTimeInterval:0.05f
@@ -109,7 +96,7 @@
 
 - (void) setCameraOff
 {
-    camOn = NO;
+    [apiConnection camSetCamOff];
     if(timer != nil)
     {
         [timer invalidate];
@@ -123,17 +110,15 @@
 }
 
 - (IBAction)camSwitchChanged:(id)sender {
-    
+
+    NSLog(@"Change Switch");
     if(camOnOffSwitch.on == YES)
     {
-        NSLog(@"Camera On");
         [self setCameraOn];
     }
     else
     {
-        
         [self setCameraOff];
-        NSLog(@"Camera Off");
     }
 }
 
@@ -143,23 +128,10 @@
     
     dispatch_async(myQueue, ^{
         
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/axis-cgi/jpg/image.cgi?resolution=CIF&color=%d", camIp, color]];
-        NSError *myError = nil;
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url
-                                                               cachePolicy: NSURLRequestReloadIgnoringCacheData
-                                                           timeoutInterval: 3];
-        [request addValue:camAuthHeader forHTTPHeaderField:@"Authorization"];
-        NSURLResponse *response;
-        NSData *imageData = [NSURLConnection
-                             sendSynchronousRequest: request
-                             returningResponse: &response
-                             error: &myError];
-        
-        UIImage *image = [UIImage imageWithData:imageData];
+        UIImage *image = [apiConnection camGetImage];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            //NSLog(@"New Frame");
-            if(camOn)
+            if([apiConnection.camOn isEqualToNumber:[NSNumber numberWithBool:YES]])
             {
                 liveStreamImage.image = image;
             }
@@ -172,33 +144,27 @@
     [super viewDidUnload];
 }
 - (void)swipeLeft:(id)sender {
-    [self camCommand:@"move" :@"right"];
+    [apiConnection camCommand:@"move" :@"right"];
     NSLog(@"right");
 }
 
 - (void)swipeRight:(id)sender {
-    [self camCommand:@"move" :@"left"];
+    [apiConnection camCommand:@"move" :@"left"];
     NSLog(@"left");
 }
 
 - (void)swipeUp:(id)sender {
-    [self camCommand:@"move" :@"down"];
+    [apiConnection camCommand:@"move" :@"down"];
     NSLog(@"down");
 }
 
 - (void)swipeDown:(id)sender {
-    [self camCommand:@"move" :@"up"];
+    [apiConnection camCommand:@"move" :@"up"];
     NSLog(@"up");
 }
 
 - (IBAction)adjustBrightness:(id)sender {
-    int brightNess = (int)roundf(brightnessSlider.value);
-    if (brightNess < activeBrightness || brightNess > activeBrightness) {
-        activeBrightness = brightNess;
-        NSString *brightnessValue = [NSString stringWithFormat:@"%i", brightNess];
-        NSLog(@"Brightness changed to: %@", brightnessValue);
-        [self camCommand:@"brightness" :brightnessValue];
-    }
+    [apiConnection camSetBrightness:[NSNumber numberWithInt:(int)roundf(brightnessSlider.value)]];
 }
 
 - (IBAction)changeDayNight:(id)sender
@@ -207,11 +173,12 @@
     if (dayNightControl.selectedSegmentIndex == 0)
     {
         NSLog(@"Day");
-        color = 1;    }
+        [apiConnection setCamDayVision:[NSNumber numberWithBool:YES]];
+    }
     else
     {
         NSLog(@"night");
-        color = 0;
+        [apiConnection setCamDayVision:[NSNumber numberWithBool:NO]];
     }
 }
 
@@ -219,44 +186,18 @@
     if ([sender state] == UIGestureRecognizerStateBegan || [sender state] == UIGestureRecognizerStateChanged) {
         double scale = [sender scale];
         if (scale > 1.0) {
-            [self camCommand:@"rzoom" :@"100"];
-            NSLog(@"zoom in");
+            [apiConnection camCommand:@"rzoom" :@"100"];
         } else {
-            [self camCommand:@"rzoom" :@"-100"];
-            NSLog(@"zoom out");
+            [apiConnection camCommand:@"rzoom" :@"-100"];
         }
-    }
-}
-
-- (void)camCommand:(NSString*)parameter:(NSString*)value
-{
-    if(camOn)
-    {
-        dispatch_queue_t myQueue = dispatch_queue_create("moveCamTreath", NULL);
-        
-        dispatch_async(myQueue, ^{
-            
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/axis-cgi/com/ptz.cgi?%@=%@", camIp, parameter, value]];
-//            NSError *myError = nil;
-            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url
-                                                                   cachePolicy: NSURLRequestReloadIgnoringCacheData
-                                                               timeoutInterval: 3];
-            [request addValue:camAuthHeader forHTTPHeaderField:@"Authorization"];
-//            NSURLResponse *response;
-            
-            
-//            NSData *returnData = [NSURLConnection
-//                                  sendSynchronousRequest: request
-//                                  returningResponse: &response
-//                                  error: &myError];
-        });
     }
 }
 
 
 //share on twitter, facebook, mail
 - (IBAction)share:(id)sender {
-    if(camOn) {
+    if([apiConnection.camOn isEqualToNumber:[NSNumber numberWithBool:YES]])
+    {
         [self shareAction];
     } else {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oeps!" message:@"Start eerst de stream om te kunnen delen" delegate:self cancelButtonTitle:@"Annuleren" otherButtonTitles:@"Stream Starten",nil];
