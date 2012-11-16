@@ -9,7 +9,10 @@
 #import "Temperature.h"
 
 @implementation Temperature
--(double) getTemperature {
-    return 12.3;
+
+@synthesize temp;
+
+-(NSNumber *) getTemperature {
+    return temp;
 }
 @end

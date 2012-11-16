@@ -17,12 +17,12 @@
     NSTimer *timer;
     int activeBrightness;
     int color;
+    bool camOn;
 }
 
 @synthesize liveStreamImage;
 
 @synthesize camIp, camUsername, camPassword, camAuthHeader, brightnessSlider;
-@synthesize camOn;
 @synthesize camOnOffSwitch;
 @synthesize dayNightControl;
 
@@ -35,6 +35,7 @@
     camPassword = @"bigbrother";
     
     color = 1;
+    camOn = NO;
     
     NSMutableString *loginString = (NSMutableString*)[@"" stringByAppendingFormat:@"%@:%@", camUsername, camPassword];
     NSData *authData = [loginString dataUsingEncoding:NSUTF8StringEncoding];
@@ -236,18 +237,18 @@
         dispatch_async(myQueue, ^{
             
             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/axis-cgi/com/ptz.cgi?%@=%@", camIp, parameter, value]];
-            NSError *myError = nil;
+//            NSError *myError = nil;
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url
                                                                    cachePolicy: NSURLRequestReloadIgnoringCacheData
                                                                timeoutInterval: 3];
             [request addValue:camAuthHeader forHTTPHeaderField:@"Authorization"];
-            NSURLResponse *response;
+//            NSURLResponse *response;
             
             
-            NSData *returnData = [NSURLConnection
-                                  sendSynchronousRequest: request
-                                  returningResponse: &response
-                                  error: &myError];
+//            NSData *returnData = [NSURLConnection
+//                                  sendSynchronousRequest: request
+//                                  returningResponse: &response
+//                                  error: &myError];
         });
     }
 }

@@ -39,6 +39,7 @@
 		CDB7A2831611BBEA00153D5D /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB7A2821611BBEA00153D5D /* MusicViewController.m */; };
 		CDB7A2861611C01000153D5D /* glyphicons_190_circle_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2841611C01000153D5D /* glyphicons_190_circle_plus.png */; };
 		CDB7A2871611C01000153D5D /* glyphicons_191_circle_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB7A2851611C01000153D5D /* glyphicons_191_circle_minus.png */; };
+		F89B122916550D070083155A /* api.m in Sources */ = {isa = PBXBuildFile; fileRef = F89B122816550D070083155A /* api.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		CDB7A2821611BBEA00153D5D /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		CDB7A2841611C01000153D5D /* glyphicons_190_circle_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_190_circle_plus.png; sourceTree = "<group>"; };
 		CDB7A2851611C01000153D5D /* glyphicons_191_circle_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_191_circle_minus.png; sourceTree = "<group>"; };
+		F89B122716550D070083155A /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		F89B122816550D070083155A /* api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = api.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,29 +136,17 @@
 		CD0123AE1611AC6A00CBE84A /* MyRo Cam */ = {
 			isa = PBXGroup;
 			children = (
-				CD1750151651165B0051091D /* NSData+Additions.h */,
-				CD1750161651165B0051091D /* NSData+Additions.m */,
-				CD8CD5C6164D204B001C34E0 /* AbstractTemperature.h */,
-				CD8CD5C4164D203B001C34E0 /* Temperature.h */,
-				CD8CD5C5164D203B001C34E0 /* Temperature.m */,
-				CD14449816159B7500892551 /* Track.h */,
-				CD14449916159B7500892551 /* Track.m */,
+				F89B122616550CFB0083155A /* Api */,
+				F89B122516550C8D0083155A /* Settings */,
+				F89B122416550C840083155A /* Temparature */,
+				F89B122316550C790083155A /* Music */,
+				F89B122216550C710083155A /* Cam */,
 				CD0123D31611AE7100CBE84A /* Resources */,
 				CD0123AF1611AC6A00CBE84A /* Supporting Files */,
 				CD0123B71611AC6A00CBE84A /* AppDelegate.h */,
 				CD0123B81611AC6A00CBE84A /* AppDelegate.m */,
 				CD0123C01611AC6A00CBE84A /* MainStoryboard_iPhone.storyboard */,
 				CD175012165114F60051091D /* MainStoryboard_iPad.storyboard */,
-				CD14449C16159E8700892551 /* SelectMusicViewController.h */,
-				CD14449D16159E8700892551 /* SelectMusicViewController.m */,
-				CD14449F1615A21F00892551 /* TrackCell.h */,
-				CD1444A01615A21F00892551 /* TrackCell.m */,
-				CD0123D01611AE6A00CBE84A /* CameraViewController.h */,
-				CD0123D11611AE6A00CBE84A /* CameraViewController.m */,
-				CDB7A2811611BBEA00153D5D /* MusicViewController.h */,
-				CDB7A2821611BBEA00153D5D /* MusicViewController.m */,
-				CD8CD5C1164D16C5001C34E0 /* TemperatureViewController.h */,
-				CD8CD5C2164D16C5001C34E0 /* TemperatureViewController.m */,
 			);
 			path = "MyRo Cam";
 			sourceTree = "<group>";
@@ -208,6 +199,60 @@
 				CDB7A2711611B69200153D5D /* settings.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		F89B122216550C710083155A /* Cam */ = {
+			isa = PBXGroup;
+			children = (
+				CD1750151651165B0051091D /* NSData+Additions.h */,
+				CD1750161651165B0051091D /* NSData+Additions.m */,
+				CD0123D01611AE6A00CBE84A /* CameraViewController.h */,
+				CD0123D11611AE6A00CBE84A /* CameraViewController.m */,
+			);
+			name = Cam;
+			sourceTree = "<group>";
+		};
+		F89B122316550C790083155A /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				CD14449C16159E8700892551 /* SelectMusicViewController.h */,
+				CD14449D16159E8700892551 /* SelectMusicViewController.m */,
+				CDB7A2811611BBEA00153D5D /* MusicViewController.h */,
+				CDB7A2821611BBEA00153D5D /* MusicViewController.m */,
+				CD14449816159B7500892551 /* Track.h */,
+				CD14449916159B7500892551 /* Track.m */,
+				CD14449F1615A21F00892551 /* TrackCell.h */,
+				CD1444A01615A21F00892551 /* TrackCell.m */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+		F89B122416550C840083155A /* Temparature */ = {
+			isa = PBXGroup;
+			children = (
+				CD8CD5C4164D203B001C34E0 /* Temperature.h */,
+				CD8CD5C5164D203B001C34E0 /* Temperature.m */,
+				CD8CD5C1164D16C5001C34E0 /* TemperatureViewController.h */,
+				CD8CD5C2164D16C5001C34E0 /* TemperatureViewController.m */,
+				CD8CD5C6164D204B001C34E0 /* AbstractTemperature.h */,
+			);
+			name = Temparature;
+			sourceTree = "<group>";
+		};
+		F89B122516550C8D0083155A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		F89B122616550CFB0083155A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				F89B122716550D070083155A /* api.h */,
+				F89B122816550D070083155A /* api.m */,
+			);
+			name = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +345,7 @@
 				CD14449E16159E8700892551 /* SelectMusicViewController.m in Sources */,
 				CD1444A11615A21F00892551 /* TrackCell.m in Sources */,
 				CD8CD5C3164D16C5001C34E0 /* TemperatureViewController.m in Sources */,
+				F89B122916550D070083155A /* api.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

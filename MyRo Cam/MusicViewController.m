@@ -128,7 +128,7 @@
     //trackList = airport;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)thisTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"MusicCell";
     TrackCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];

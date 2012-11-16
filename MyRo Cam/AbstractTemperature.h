@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol AbstractTemperature
--(double) getTemperature;
+//-(double) getTemperature;
 
 @end
