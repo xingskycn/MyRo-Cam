@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TemperatureViewController : UIViewController
+@interface TemperatureViewController : UIViewController{
+       NSArray *tableData;
+}
 @property (weak, nonatomic) IBOutlet UILabel *lblTemperature;
+@property (nonatomic, retain) NSArray *tableData;
+
+-(void) parseJSON;
 
 @end
