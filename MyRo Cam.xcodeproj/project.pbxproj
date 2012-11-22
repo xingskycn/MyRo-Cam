@@ -204,8 +204,6 @@
 		F89B122216550C710083155A /* Cam */ = {
 			isa = PBXGroup;
 			children = (
-				CD1750151651165B0051091D /* NSData+Additions.h */,
-				CD1750161651165B0051091D /* NSData+Additions.m */,
 				CD0123D01611AE6A00CBE84A /* CameraViewController.h */,
 				CD0123D11611AE6A00CBE84A /* CameraViewController.m */,
 			);
@@ -251,6 +249,8 @@
 			children = (
 				F89B122716550D070083155A /* api.h */,
 				F89B122816550D070083155A /* api.m */,
+				CD1750151651165B0051091D /* NSData+Additions.h */,
+				CD1750161651165B0051091D /* NSData+Additions.m */,
 			);
 			name = Api;
 			sourceTree = "<group>";
