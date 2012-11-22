@@ -46,18 +46,17 @@
         dispatch_async(myQueue, ^{
             
             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/axis-cgi/com/ptz.cgi?%@=%@", camIp, parameter, value]];
-            //            NSError *myError = nil;
+            
+            NSError *myError = nil;
+            NSURLResponse *response;
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url
                                                                    cachePolicy: NSURLRequestReloadIgnoringCacheData
                                                                timeoutInterval: 3];
             [request addValue:camAuthHeader forHTTPHeaderField:@"Authorization"];
-            //            NSURLResponse *response;
-            
-            
-            //            NSData *returnData = [NSURLConnection
-            //                                  sendSynchronousRequest: request
-            //                                  returningResponse: &response
-            //                                  error: &myError];
+                        
+            [NSURLConnection sendSynchronousRequest: request
+                                  returningResponse: &response
+                                              error: &myError];
         });
     }
 }
